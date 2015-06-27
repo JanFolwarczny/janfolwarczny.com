@@ -1,0 +1,141 @@
+{layout ../@layout.latte}
+
+{title Digital Product Designer, Co-founder of KvikyMart}
+
+
+
+{block content}
+    <header class="hero">
+        <h1><a href="/">Jan Folwarczny</a></h1>
+
+        <p>
+            Digital Product Designer, Co-founder of&nbsp;<a href="https://kvikymart.cz" target="_blank">KvikyMart<span class="fontello-link-ext"></span></a>
+            {*Available <br class="xs">for&nbsp;interesting&nbsp;projects*}
+        </p>
+
+        <div class="contact">
+            <div class="profile-photo" style="background-image: url('{$dataUrlPath}/img/profile-image-2018-04.jpg?1');"></div>
+            <div class="social-icons">
+                <div class="table">
+                    <div class="row">
+                        <div class="cell">
+                            <a href="mailto:jan@janfolwarczny.com" class="mail">
+                                <i class="fontello-mail"></i>
+                                <span class="title">Email<br>jan@janfolwarczny.com</span>
+                            </a>
+                        </div>
+                        {*
+                        <div class="cell">
+                            <a href="skype://Folwik_1?chat" class="skype">
+                                <i class="fontello-skype"></i>
+                                <span class="title">Skype<br>Folwik_1</span>
+                            </a>
+                        </div>
+                        *}
+                        <div class="cell">
+                            <a href="https://www.facebook.com/Folwik" class="facebook" target="_blank">
+                                <i class="fontello-facebook"></i>
+                                <span class="title">Facebook<br>Folwik</span>
+                            </a>
+                        </div>
+                        <div class="cell">
+                            <a href="https://twitter.com/janfolwarczny" class="twitter" target="_blank">
+                                <i class="fontello-twitter"></i>
+                                <span class="title">Twitter<br>@janfolwarczny</span>
+                            </a>
+                        </div>
+                        {*
+                        <div class="cell">
+                            <a href="https://dribbble.com/janfolwarczny" class="dribbble" target="_blank">
+                                <i class="fontello-dribbble"></i>
+                                <span class="title">Dribbble<br>janfolwarczny</span>
+                            </a>
+                        </div>
+                        <div class="cell">
+                            <a href="https://www.behance.net/janfolwarczny" class="behance" target="_blank">
+                                <i class="fontello-behance"></i>
+                                <span class="title">Behance<br>janfolwarczny</span>
+                            </a>
+                        </div>
+                        *}
+                        <div class="cell">
+                            <a href="https://www.instagram.com/janfolwarczny" class="instagram" target="_blank">
+                                <i class="fontello-instagram"></i>
+                                <span class="title">Instagram<br>janfolwarczny</span>
+                            </a>
+                        </div>
+                        <div class="cell">
+                            <a href="https://www.pinterest.com/janfolwarczny" class="pinterest" target="_blank">
+                                <i class="fontello-pinterest"></i>
+                                <span class="title">Pinterest<br>janfolwarczny</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="portfoliomenu">
+        <div>
+            {image img/portfolio-granex.jpg}
+        </div>
+        <div>
+            {image img/portfolio-bunnybarney.jpg}
+        </div>
+        <div>
+            {image img/portfolio-obchodvalentyn.jpg}
+        </div>
+        {*
+        <div>
+            {image img/portfolio-bilacerna.jpg}
+        </div>
+        <div>
+            {image img/portfolio-eiffage-construction.jpg}
+        </div>
+        <div>
+            {image img/portfolio-mobilduo.jpg}
+        </div>
+        <div>
+            {image img/portfolio-apartman-sedlo.jpg}
+        </div>
+        <div>
+            {image img/portfolio-logos.png}
+        </div>
+        *}
+    </div>
+
+
+    <div class="heading">
+        <h2>Photos</h2>
+    </div>
+
+
+    <div class="imagemenu">
+        {foreach ['grossglockner', 'disneylandparis', 'paris'] as $path}
+            <div class="item">
+                <a href="/{$path}">
+                    <span class="image" style="background-image: url('{$routes[$path]['coverUrlPath']|noescape}');"></span>
+                    <span class="title">
+                        <h3>{$routes[$path]['title']|noescape}</h3>
+                        {$routes[$path]['description']|noescape}
+                    </span>
+                </a>
+            </div>
+        {/foreach}
+    </div>
+
+
+    {include ../@social.latte title => "Jan Folwarczny"}
+
+
+    <footer>
+        <div>
+            Ing.&nbsp;Jan&nbsp;Folwarczny<br>
+            Email: <a href='mailto:jan@janfolwarczny.com'>jan@janfolwarczny.com</a><br>
+            Phone: +420&nbsp;774&nbsp;849&nbsp;215<br>
+            Address: Neukončená&nbsp;348/24, 725&nbsp;29&nbsp;Ostrava-Petřkovice, Czech&nbsp;Republic<br>
+            Company&nbsp;registration&nbsp;number: 88509729<br>
+            {*Zapsán v registru živnostenského úřadu magistrátu města Ostravy pod č.j.: SMO/027263/12/ŽU/VAJ.*}
+        </div>
+    </footer>
+{/block}

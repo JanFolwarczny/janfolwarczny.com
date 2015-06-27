@@ -1,0 +1,5 @@
+User-Agent: *
+Disallow: /app/
+Disallow: /dump/
+Disallow: /pages/
+Disallow: /*.php$

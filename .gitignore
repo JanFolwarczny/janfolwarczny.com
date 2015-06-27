@@ -1,0 +1,15 @@
+# Environment
+.idea
+.DS_Store
+
+# Code
+assets/build
+bower_components
+log
+node_modules
+temp
+vendor
+
+# Exceptions
+!.gitignore
+!.htaccess
