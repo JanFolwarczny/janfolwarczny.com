@@ -1,0 +1,25 @@
+@import "../components/_variables.css";
+
+.heroParagraph {
+    font-size: 1.2rem;
+    margin: 0 0 4rem;
+}
+
+@media (min-width: 990px) {
+    .heroParagraph {
+        font-size: 1.75rem;
+    }
+}
+
+.socialLinks {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3rem -1rem;
+    padding: 0;
+    justify-content: space-between;
+}
+
+.socialLinks li {
+    list-style-type: none;
+    margin: 1rem;
+}

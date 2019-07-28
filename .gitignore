@@ -1,15 +1,11 @@
-# Environment
-.idea
-.DS_Store
-
-# Code
-assets/build
-bower_components
-log
 node_modules
-temp
-vendor
+.eslintcache
+.cache/
+public
+.DS_Store
+.idea
+.old-website
 
-# Exceptions
+
 !.gitignore
 !.htaccess

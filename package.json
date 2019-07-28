@@ -1,11 +1,33 @@
 {
-  "devDependencies": {
-    "gulp": "^3.9.0",
-    "gulp-concat": "^2.6.0",
-    "gulp-less": "^3.0.3",
-    "gulp-rename": "^1.2.2",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-uglify": "^1.4.1",
-    "gulp-util": "^3.0.6"
-  }
+    "name": "janfolwarczny-com",
+    "private": true,
+    "description": "Jan Folwarczny's website",
+    "version": "0.1.0",
+    "author": "Jan Folwarczny <jan@janfolwarczny.com>",
+    "dependencies": {
+        "gatsby": "^2.9.2",
+        "gatsby-background-image": "^0.7.1",
+        "gatsby-image": "^2.1.4",
+        "gatsby-plugin-gtag": "^1.0.11",
+        "gatsby-plugin-manifest": "^2.1.1",
+        "gatsby-plugin-offline": "^2.1.3",
+        "gatsby-plugin-postcss": "^2.0.7",
+        "gatsby-plugin-react-helmet": "^3.0.12",
+        "gatsby-plugin-remove-trailing-slashes": "^2.0.11",
+        "gatsby-plugin-sharp": "^2.1.5",
+        "gatsby-source-filesystem": "^2.0.39",
+        "gatsby-transformer-sharp": "^2.1.21",
+        "intersection-observer": "^0.7.0",
+        "normalize.css": "^8.0.1",
+        "postcss-preset-env": "^6.6.0",
+        "prop-types": "^15.7.2",
+        "react": "^16.8.6",
+        "react-dom": "^16.8.6",
+        "react-helmet": "^5.2.1"
+    },
+    "scripts": {
+        "build": "gatsby build",
+        "develop": "gatsby develop",
+        "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+    }
 }

@@ -1,0 +1,9 @@
+@import "../components/_variables.css";
+
+.heading {
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-weight: 900;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+    color: black;
+}
