@@ -4,8 +4,6 @@ node_modules
 public
 .DS_Store
 .idea
-.old-website
-
-
+TODO.md
 !.gitignore
 !.htaccess

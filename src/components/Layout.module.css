@@ -19,12 +19,7 @@
 :global a {
     color: inherit;
     display: inline-block;
-    transition: transform .2s;
     -webkit-text-underline-position: under;
-}
-
-:global a:active {
-    transform: translateY(2px);
 }
 
 .main {

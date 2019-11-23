@@ -1,7 +1,7 @@
 import {graphql, Link, StaticQuery} from 'gatsby'
 import React from 'react'
 import styles from './Header.module.css';
-import LinkOutside from "./LinkOutside";
+import Anchor from "./Anchor";
 
 
 const Header = () => (
@@ -22,7 +22,7 @@ const Header = () => (
                         {data.site.siteMetadata.siteTitle}
                     </Link>
                 </h1>
-                <LinkOutside to={'https://m.me/Folwik'}>Write me</LinkOutside>
+                <Anchor href={'https://m.me/Folwik'}>Write me</Anchor>
             </header>
         )}
     />
