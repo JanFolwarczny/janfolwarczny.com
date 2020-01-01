@@ -1,29 +1,57 @@
-import React from 'react';
+import "normalize.css";
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import {graphql, useStaticQuery} from 'gatsby';
 import Header from './Header';
-import styles from './Layout.module.css';
-import BackgroundImage from 'gatsby-background-image'
+import {Waypoint} from "react-waypoint";
+import {ParallaxProvider} from "react-scroll-parallax/cjs";
+import {createGlobalStyle} from "styled-components";
+import {BREAKPOINT_MIN_WIDTH} from "./breakpoint";
+import {FONT_WEIGHT} from "./font";
 
+const GlobalStyle = createGlobalStyle`
+    html {
+        font-size: 14px;
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+        @media ${BREAKPOINT_MIN_WIDTH.tablet} {    
+            font-size: 15px;
+        }
+    }
+    body {
+        background-color: black;
+        color: white;
+        line-height: 1.5;
+        padding-top: 4rem;
+    }
+    a {
+        color: inherit;
+        display: inline-block;
+        -webkit-text-underline-position: under;
+    }
+    b, strong {
+        font-weight: ${FONT_WEIGHT.bold};
+    }
+`;
 
 const Layout = ({children}) => {
-    const img = useStaticQuery(graphql`{
-                file(relativePath: { eq: "20180524091350_FXE31773_wallpaper.jpg" }) {
-                    childImageSharp {
-                        fluid(quality: 80, maxWidth: 2560) {
-                            ...GatsbyImageSharpFluid_withWebp
-                        }
-                    }
-                }
-            }`);
+    const [isHeaderSuppress, setHeaderSuppress] = useState(false);
 
-    return <>
-        <BackgroundImage Tag="div" className={styles.background} fluid={img.file.childImageSharp.fluid}/>
-        <Header/>
-        <main className={styles.main}>
+    return <ParallaxProvider>
+        <GlobalStyle/>
+        <Header suppress={isHeaderSuppress}/>
+        <main>
+            <Waypoint
+                // topOffset={'56px'}
+                onEnter={() => {
+                    setHeaderSuppress(false);
+                }}
+                onLeave={() => setHeaderSuppress(true)}
+            />
             {children}
         </main>
-    </>;
+    </ParallaxProvider>;
 };
 
 Layout.propTypes = {

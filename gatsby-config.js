@@ -2,8 +2,8 @@ module.exports = {
     siteMetadata: {
         siteUrl: process.env.SITE_URL,
         siteTitle: `Jan Folwarczny`,
-        defaultTitle: `Jan Folwarczny \u2014\u2014 Co-founder & CPO at KVIKYMART, Technology Entrepreneur, Designer, Traveller, Photographer`,
-        titleTemplate: `%s \u2014\u2014 janfolwarczny.com`,
+        defaultTitle: `Jan Folwarczny \u2014 Co-founder & CPO at KVIKYMART, Technology Entrepreneur, Designer, Traveller, Photographer`,
+        titleTemplate: `%s \u2014 janfolwarczny.com`,
         author: `@janfolwarczny`,
     },
     plugins: [
@@ -11,6 +11,7 @@ module.exports = {
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
         `gatsby-plugin-remove-trailing-slashes`,
+        `gatsby-plugin-styled-components`,
         {
             resolve: `gatsby-source-filesystem`,
             options: {
@@ -31,17 +32,6 @@ module.exports = {
             },
         },
         {
-            resolve: `gatsby-plugin-postcss`,
-            options: {
-                postCssPlugins: [
-                    require(`postcss-preset-env`)({
-                        stage: 2,
-                        browsers: '< 1%'
-                    })
-                ],
-            },
-        },
-        {
             resolve: `gatsby-plugin-gtag`,
             options: {
                 trackingId: `UA-35799358-1`,
@@ -51,7 +41,6 @@ module.exports = {
         },
         // this (optional) plugin enables Progressive Web App + Offline functionality
         // To learn more, visit: https://gatsby.app/offline
-        // 'gatsby-plugin-offline',
         // gatsby-plugin-react-svg
         // gatsby-plugin-google-tagmanager
         // https://www.gatsbyjs.org/packages/gatsby-plugin-layout/?=

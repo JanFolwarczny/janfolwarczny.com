@@ -1,5 +1,6 @@
 import React from 'react'
 import BlogListArticle from "./BlogListArticle";
+import HorizontaLine from "./HorizontalLine";
 
 
 const BlogList = () => {
@@ -14,6 +15,8 @@ const BlogList = () => {
             {/* description */}
         </BlogListArticle>
 
+        <HorizontaLine/>
+
         <BlogListArticle
             img={'https://kvikymart.com/static/article_3-a3ca3fcecce8b7a723e7ba4518a5990f.jpg'}
             link={'https://bit.ly/2m2g89k'}
@@ -23,6 +26,8 @@ const BlogList = () => {
             medium={'Patriot Magazín'}>
             {/* description */}
         </BlogListArticle>
+
+        <HorizontaLine/>
 
         <BlogListArticle
             img={'https://kvikymart.com/static/article_2-dd288b9860e6fe5d68ba27d247526094.jpg'}
@@ -34,6 +39,8 @@ const BlogList = () => {
             {/* description */}
         </BlogListArticle>
 
+        <HorizontaLine/>
+
         <BlogListArticle
             img={'https://kvikymart.com/static/article_0-55fa5afb48dbe86ca92481c7fab806e4.jpg'}
             link={'https://bit.ly/kvikymart-zmenili-jsme-automobilovy-aftermarket'}
@@ -44,6 +51,8 @@ const BlogList = () => {
             {/* description */}
         </BlogListArticle>
 
+        <HorizontaLine/>
+
         <BlogListArticle
             img={'https://strv.ghost.io/content/images/2016/06/IMG_2091.JPG'}
             link={'https://www.strv.com/blog/silicon-valley-contest-winners-tour-san-francisco-bay-area-tech-giants'}
@@ -53,6 +62,8 @@ const BlogList = () => {
             medium={'STRV'}>
             {/* description */}
         </BlogListArticle>
+
+        <HorizontaLine/>
 
         <BlogListArticle
             img={'https://img.youtube.com/vi/Gqkyc0pgxWQ/0.jpg'}
