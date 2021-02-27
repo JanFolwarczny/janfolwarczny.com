@@ -1,10 +1,22 @@
 import React from 'react'
 import BlogListArticle from "./BlogListArticle";
-import HorizontaLine from "./HorizontalLine";
+import styled from "styled-components";
+import {BREAKPOINT_MIN_WIDTH} from "./breakpoint";
 
+
+const BlogListWrap = styled.div`
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 128px;
+    @media ${BREAKPOINT_MIN_WIDTH.tablet} {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+`;
 
 const BlogList = () => {
-    return <div>
+    return <BlogListWrap>
         <BlogListArticle
             img={'https://kvikymart.com/static/og-image-2018-09-43eaf11885c66380f142047ba3e423a4.png'}
             link={'https://www.ms-ic.cz/en/kvikymart-a-revolution-for-e-shops-selling-aftermarket-car-parts/'}
@@ -14,8 +26,6 @@ const BlogList = () => {
             medium={'Moravian-Silesian Innovation Center'}>
             {/* description */}
         </BlogListArticle>
-
-        <HorizontaLine/>
 
         <BlogListArticle
             img={'https://kvikymart.com/static/article_3-a3ca3fcecce8b7a723e7ba4518a5990f.jpg'}
@@ -27,8 +37,6 @@ const BlogList = () => {
             {/* description */}
         </BlogListArticle>
 
-        <HorizontaLine/>
-
         <BlogListArticle
             img={'https://kvikymart.com/static/article_2-dd288b9860e6fe5d68ba27d247526094.jpg'}
             link={'https://bit.ly/kvikymart-autodily-21-stoleti'}
@@ -38,8 +46,6 @@ const BlogList = () => {
             medium={'Peak.cz'}>
             {/* description */}
         </BlogListArticle>
-
-        <HorizontaLine/>
 
         <BlogListArticle
             img={'https://kvikymart.com/static/article_0-55fa5afb48dbe86ca92481c7fab806e4.jpg'}
@@ -51,8 +57,6 @@ const BlogList = () => {
             {/* description */}
         </BlogListArticle>
 
-        <HorizontaLine/>
-
         <BlogListArticle
             img={'https://strv.ghost.io/content/images/2016/06/IMG_2091.JPG'}
             link={'https://www.strv.com/blog/silicon-valley-contest-winners-tour-san-francisco-bay-area-tech-giants'}
@@ -62,8 +66,6 @@ const BlogList = () => {
             medium={'STRV'}>
             {/* description */}
         </BlogListArticle>
-
-        <HorizontaLine/>
 
         <BlogListArticle
             img={'https://img.youtube.com/vi/Gqkyc0pgxWQ/0.jpg'}
@@ -75,7 +77,7 @@ const BlogList = () => {
             {/* description */}
         </BlogListArticle>
 
-    </div>;
+    </BlogListWrap>;
 };
 
 export default BlogList;
