@@ -58,8 +58,8 @@ const IndexPage = () => {
             </HeroParalax>
         </Container>
 
-        <Container withPadding={false} maxWidth={CONTAINER_WIDTH.max1200}>
-            <Parallax y={[50, -50]}>
+        <Container withPadding={false} maxWidth={CONTAINER_WIDTH.max960}>
+            <Parallax y={[25, -25]}>
                 <HeroImage fluid={data.placeholderImage.childImageSharp.fluid} alt={`Jan Folwarczny`}/>
             </Parallax>
         </Container>

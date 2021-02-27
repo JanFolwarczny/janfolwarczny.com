@@ -24,6 +24,10 @@ const GlobalStyle = createGlobalStyle`
         color: white;
         line-height: 1.5;
         padding-top: 4rem;
+        background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,.15) 1px, transparent 0);
+        background-position: center 47px;
+        background-size: 48px 48px;
+        box-shadow: inset 0 0 0 16px black; 
     }
     a {
         color: inherit;
